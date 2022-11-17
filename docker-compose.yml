@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    command: bash -c "rails server -e production"
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
