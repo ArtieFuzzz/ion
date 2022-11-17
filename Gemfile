@@ -6,6 +6,8 @@ ruby "3.1.2"
 gem "http"
 gem "jwt"
 
+gem "ruby-lsp", "~> 0.3.6", :group => :development
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -27,4 +29,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-

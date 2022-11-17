@@ -97,6 +97,7 @@ GEM
     irb (1.4.2)
       reline (>= 0.3.0)
     jwt (2.5.0)
+    language_server-protocol (3.17.0.1)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -120,6 +121,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.9-x64-mingw-ucrt)
       racc (~> 1.4)
+    prettier_print (1.1.0)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -156,6 +158,13 @@ GEM
     rake (13.0.6)
     reline (0.3.1)
       io-console (~> 0.5)
+    ruby-lsp (0.3.6)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 4.0.2, < 5.0.0)
+    sorbet-runtime (0.5.10560)
+    syntax_tree (4.3.0)
+      prettier_print (>= 1.0.2)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
@@ -179,6 +188,7 @@ DEPENDENCIES
   jwt
   puma (~> 5.0)
   rails (~> 7.0.4)
+  ruby-lsp (~> 0.3.6)
   tzinfo-data
 
 RUBY VERSION

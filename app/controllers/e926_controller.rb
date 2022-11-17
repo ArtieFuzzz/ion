@@ -12,13 +12,13 @@ class E926Controller < ApplicationController
 
     posts = fetch(tags, limit)
 
-    render json: {code: 0, posts}
+    render json: posts
   end
 
   private
 
   def fetch(tags, limit)
-    resp = HTTP.get('https://e926.net/posts.json', :params => { tags: 'limit:#{limit} order:random -young #{tags}' })
+    resp = HTTP.get('https://e926.net/posts.json', :params => { tags: "limit:#{limit} order:random -young #{tags}" })
 
     resp.to_s
   end
