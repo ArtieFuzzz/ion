@@ -27,6 +27,6 @@ class ApplicationController < ActionController::API
   end
 
   def authorized
-    render json: {message: 'You are not authorized to access this route'}, status: :unauthorized unless valid_token?
+    render json: {code: 2, message: 'You are not authorized to access this route'}, status: :unauthorized unless valid_token?
   end
 end

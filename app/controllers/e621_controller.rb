@@ -6,13 +6,13 @@ class E621Controller < ApplicationController
     limit = params[:limit]
 
     if !tags || !limit 
-      render json: {message: 'Missing parameters!'}
+      render json: {code: 1, message: 'Missing parameters!'}
       return
     end
 
     posts = fetch(tags, limit)
 
-    render json: posts
+    render json: {code: 0, posts}
   end
 
   private
